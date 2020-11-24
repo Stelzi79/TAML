@@ -25,12 +25,144 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.Parser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.Parser.html",
+          "hash": "K8TOexkz+nszNqyHsdMkSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlArray.html",
+          "hash": "psQbDnDZFHnmTP94HHba1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlDocument.html",
+          "hash": "+fO6WfpaSXk9TYeZEq1Mhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlExtensionMethods.html",
+          "hash": "YLn5XAL+w5uQLgfeUOhRcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlKeyValuePair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlKeyValuePair.html",
+          "hash": "7pJydNi/qEvMf5PfvR46RA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.TamlValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.TamlValue.html",
+          "hash": "QP1gJrsZ2BQltKF5hcAU0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api-dotnet/TAML.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/TAML.html",
+          "hash": "H1qVExToXkgqENFAi5F74g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api-dotnet/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/index.html",
+          "hash": "/1RhQyiwRbQM29SpGHadkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api-dotnet/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api-dotnet/toc.html",
+          "hash": "jGZEDjYi2m3KtuiIhUgHsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/README.md",
       "output": {
         ".html": {
           "relative_path": "articles/README.html",
-          "hash": "CZBYjDXp3BF+P7ptYL2k5Q=="
+          "hash": "GudJUU5zJRUBOJr267heTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concrete_examples/javascript/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concrete_examples/javascript/README.html",
+          "hash": "Wv1rs5weOUEsNHlA2N7JCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concrete_examples/yml/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concrete_examples/yml/README.html",
+          "hash": "0VPV1SRBx3WWG/0S0brHGw=="
         }
       },
       "is_incremental": false,
@@ -73,44 +205,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/test_suite/1_keyvaluepairs.taml",
+      "type": "Conceptual",
+      "source_relative_path": "articles/test_suite.md",
       "output": {
-        "resource": {
-          "relative_path": "articles/test_suite/1_keyvaluepairs.taml"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/test_suite/2_arrays.taml",
-      "output": {
-        "resource": {
-          "relative_path": "articles/test_suite/2_arrays.taml"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/test_suite/3_childarrays.taml",
-      "output": {
-        "resource": {
-          "relative_path": "articles/test_suite/3_childarrays.taml"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/test_suite/4_childkeyvaluepairs.taml",
-      "output": {
-        "resource": {
-          "relative_path": "articles/test_suite/4_childkeyvaluepairs.taml"
+        ".html": {
+          "relative_path": "articles/test_suite.html",
+          "hash": "RTFsoZD3uy6ndpWsCIcolg=="
         }
       },
       "is_incremental": false,
@@ -122,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "D0zAvzwY9/wvAV+VlZjSGA=="
+          "hash": "KqFoxQek/msbaz7CDelTaQ=="
         }
       },
       "is_incremental": false,
@@ -168,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "eidipDkh4gQgkcABI3X3OQ=="
+          "hash": "90SdExe/zybJjg1a1ryAFQ=="
         }
       },
       "is_incremental": false,
@@ -196,7 +296,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
+          "total_file_count": 10,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 7,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

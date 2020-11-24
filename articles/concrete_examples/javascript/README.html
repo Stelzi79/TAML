@@ -5,20 +5,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>TAML | TAML </title>
+    <title>JavaScript TAML Format Samples | TAML </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="TAML | TAML ">
+    <meta name="title" content="JavaScript TAML Format Samples | TAML ">
     <meta name="generator" content="docfx 2.45.1.0">
     
-    <link rel="shortcut icon" href="../images/FritzAndFriends.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="shortcut icon" href="../../../images/FritzAndFriends.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../">
+    <meta property="docfx:rel" content="../../../">
     
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/FritzAndFriends.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/FritzAndFriends.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -77,52 +77,49 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="taml">TAML</h1>
+<h1 id="javascript-taml-format-samples">JavaScript TAML Format Samples</h1>
 
-<h2 id="specification">Specification</h2>
-<h3 id="version-10">Version 1.0</h3>
-<p>TAML attempts to provide a very simple message format that can be used for network communications or hierarchical configuration storage on disk.  It is defined by these 5 simple rules:</p>
-<ol>
-<li>New entries are separated by carriage returns (CR / CRLF)</li>
-<li>Keys and values are separated by 1+ tab characters (\t)</li>
-<li>Subkeys are defined on a line starting with 1+ tab characters (\t)</li>
-<li>An array is a key with multiple child values</li>
-<li>Presence of space characters are illegal</li>
-</ol>
-<p>A test suite of documents is available at the root of the GitHub repository and more information is provided in the <a href="test_suite.html">Test Suite documentation topic</a>.</p>
-<h3 id="version-11">Version 1.1</h3>
-<p>The 1.1 specification for TAML adds support for Processor Directives and comments in the file format.  In keeping with the spirit of each line in a file is a distinct record, only single-line comments are supported and directives appear on a single line with a namespaced directive, at least one tab, and then the value assigned.</p>
-<pre><code># This is a TAML comment
-! TAML.EmptyArraySupported		FALSE
+<p>The following JavaScript configuration files are provided as a proposed definition of support to replace existing file formats with TAML alternatives.</p>
+<h2 id="packagejson">Package.json</h2>
+<p>The defacto configuration file for JavaScript packages manages by the npm command-line utility is a simple format that could be replaced and made easier to read with the format and handling that TAML provides.  Consider this sample package.json file:</p>
+<pre><code class="lang-json">{
+        &quot;name&quot;: &quot;my_package&quot;,
+        &quot;description&quot;: &quot;&quot;,
+        &quot;version&quot;: &quot;1.0.0&quot;,
+        &quot;scripts&quot;: {
+                &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+        },
+        &quot;repository&quot;: {
+                &quot;type&quot;: &quot;git&quot;,
+                &quot;url&quot;: &quot;https://github.com/monatheoctocat/my_package.git&quot;
+        },
+        &quot;keywords&quot;: [],
+        &quot;author&quot;: &quot;&quot;,
+        &quot;license&quot;: &quot;ISC&quot;,
+        &quot;bugs&quot;: {
+                &quot;url&quot;: &quot;https://github.com/monatheoctocat/my_package/issues&quot;
+        },
+        &quot;homepage&quot;: &quot;https://github.com/monatheoctocat/my_package&quot;
+}
 </code></pre>
-<p>Additionally, we introducing the <code>!</code> escape character to help indicate empty values and empty arrays.</p>
-<ul>
-<li>Key value pairs without an associated value use <code>!&quot;&quot;</code> to indicate an empty string.</li>
-<li>Empty Arrays are indicated with a <code>![]</code> on the same line as the array key.</li>
-</ul>
-<pre><code># This is a key with an empty value
-key			!&quot;&quot;
-
-# This is an empty array defined by arrayKey
-arrayKey
-	![]
-
-# This is an array with one empty value
-myArray
-	!&quot;&quot;
+<p>There's a lot in this file, and a lot of markup that confuses and makes the document locked to the JavaScript language for parsing and managing.</p>
+<p>When we convert it to TAML, it becomes simpler and clearer to understand the purpose of the configuration:</p>
+<pre><code>name						my_package
+description     !&quot;&quot;
+version					1.0.0
+scripts
+        test			echo &quot;Error: no test specified&quot; &amp;&amp; exit 1
+repository
+        type			git
+        url				https://github.com/monatheoctocat/my_package.git
+keywords
+        ![]
+author						!&quot;&quot;
+licenses					ISC
+bugs
+        url				https://github.com/monatheoctocat/my_package/issues
+homepage					https://github.com/monatheoctocat/my_package
 </code></pre>
-<h2 id="available-interpreters">Available Interpreters</h2>
-<ul>
-<li><a href="interpreters/dotnet.html">dotNET</a></li>
-<li><a href="interpreters/python.html">python</a></li>
-</ul>
-<h2 id="mockups-of-well-known-documents-as-taml">Mockups of Well-Known Documents as TAML</h2>
-<ul>
-<li>Package.JSON -- Node Package Format</li>
-<li>Appsettings.JSON -- .NET Configuration Format</li>
-<li>kubernetes configuration.yml</li>
-<li>workflow.yml -- GitHub Action specification in YAML</li>
-</ul>
 </article>
           </div>
           
@@ -154,8 +151,8 @@ myArray
       </footer>
     </div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>
